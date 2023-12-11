@@ -6,6 +6,30 @@
     <title>zb</title>
 </head>
 <body>
-    <h1>hello word inuuuu</h1>
+    <h1>Login</h1>
+    <form id="myForm">
+        <label for="input">Enter a number:</label>
+        <input id="input" type="text" name="number" placeholder="Enter a number">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Get the entered number
+            var enteredNumber = document.getElementById('input').value;
+
+            // Check if the entered number is correct
+            if (enteredNumber === '4726') {
+                // Redirect to index2.html
+                window.location.href = 'index2.html';
+            } else {
+                // Show an error message (you can customize this part)
+                alert('Incorrect number. Please try again.');
+            }
+        });
+    </script>
 </body>
 </html>
