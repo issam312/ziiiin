@@ -3,94 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zb</title>
+    <title>Document</title>
     <style>
-        html, body {
-            height: 100%;
+        body {
             margin: 0;
+            padding: 0;
             overflow: hidden;
         }
+        #img {
+            width: 350px;
+            height: 310px;
+            margin-top: 100px;
+            border: 1px black solid;
+        }
 
-        #all {
-    position: absolute;
-    top: 1220px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(255, 153, 252);
-    
-    opacity: 0; /* Adjust opacity if needed */
-}
-
-#all.show {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(246, 142, 255);
-    transition: opacity 1.8s ease, bottom 3.8s ease;
- 
-    opacity: 1; /* Adjust opacity if needed */
-}
-
-#input{
-height: 30px;
-width: 300px;
-font-size: 20px;
-text-align: center;
-margin-top: 130px;
-border: 2px black solid;
-border-radius: 20px;
-margin-left: 30px;
-
-}
-#btn{
-    font-size: 20px;
-    width: 150px;
-    padding: 10px;
-margin-top: 30px;
-border: 2px black solid;
-border-radius: 20px;
-margin-left: 110px;
-
-}
-
-
-
-
+        #sas {
+            width: 310px;
+            height: 410px;
+            position: relative;
+            top: -20px;
+            left: 70px;
+        }
     </style>
 </head>
 <body>
-    <!-- <h1>Login</h1> -->
-    <form id="myForm">
-      
-        <input id="input" type="text" name="number" placeholder="Enter chi code">
-        <br><br><br><br>
-        <input id="btn" type="submit" value="Zid">
-    </form>
-
-    <div id="all"></div>
-
-    <!-- Include the shared script -->
-    <script src="shared.js"></script>
-
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Get the entered number
-            var enteredNumber = document.getElementById('input').value;
-
-            // Check if the entered number is correct
-            if (enteredNumber === code) {
-                // Display the hidden div with a smooth transition
-                document.getElementById('all').classList.add('show');
-            } else {
-                // Show an error message (you can customize this part)
-                alert('la la abrada hhhh');
-            }
-        });
-    </script>
+    <img id="img" src="fake.png" alt="tzzzz">
+    <img id="sas" src="3sas.png" alt="tzzzz">
 </body>
 </html>
