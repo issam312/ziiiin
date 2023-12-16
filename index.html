@@ -3,32 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <title>Document</title>
+    <title>hhhhhh</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            opacity: 1;
+            transition: opacity 1s; /* Add smooth transition effect for opacity */
+        }
+
+        #loading {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
         }
 
         #img {
             width: 410px;
             height: 310px;
-            margin-top: 100px;
+            position: absolute;
             border: 1px black solid;
+            left: 90px;
+            top: 1px;
         }
 
         #sas {
             width: 310px;
             height: 510px;
+            position: absolute;
+            top: 340px;
+            left: 250px;
+        }
+
+        #monster-hide {
+            height: 200px;
+            width: 210px;
+            position: absolute;
+            top: 1240px;
+            left: 220px;
+            transition: top 1s; /* Add smooth transition effect */
+        }
+
+        #msg-hide {
+            font-size: 30px;
             position: relative;
-            top: -20px;
-            left: 110px;
+            background-color: white;
+            border: 1px solid black;
+            left: 120px;
+            width: 200px;
+            padding: 25px;
+            border-radius: 30px;
+            text-align: center;
+            top: 1200px;
+            transition: top 1s; /* Add smooth transition effect */
         }
     </style>
 </head>
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading">tsnaay cnx hhh...</div>
+
+    <!-- Actual Content -->
     <img id="img" src="fake.png" alt="tzzzz">
     <img id="sas" src="3sas.png" alt="tzzzz">
+    <img id="monster-hide" src="monster.png" alt="tzzzz">
+    <h2 id="msg-hide">HHHHHHHHH la la akhty machi darkon hadii sm7i lina </h2>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementById('loading').style.display = 'none';
+
+            // Set a timeout to change the style of the element after 5 seconds
+            setTimeout(function () {
+                document.getElementById('monster-hide').style.top = '40px'; // Change top position to match #monster
+                document.getElementById('msg-hide').style.top = '1px';
+            
+
+                // document.body.style.opacity = '0.5'; // Change body opacity to 0.5
+            }, 6000);
+            setTimeout(function () {
+         
+                document.getElementById('img').style.opacity = '0.5';
+                document.getElementById('sas').style.opacity = '0.5';
+
+                // document.body.style.opacity = '0.5'; // Change body opacity to 0.5
+            }, 6500);
+        });
+        
+    </script>
 </body>
 </html>
